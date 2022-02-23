@@ -1,8 +1,30 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.locationsContainer {
+  width: 45%;
+  height: 700px;
+  border: solid 2px gray;
+  margin: 5px;
+}
+
+.mapContainer {
+  width: 50%;
+  height: 700px;
+  border: solid 2px gray;
+  margin: 5px;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +57,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
