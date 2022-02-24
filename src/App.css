@@ -1,7 +1,6 @@
 .App {
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .mainContainer {
@@ -13,48 +12,31 @@
 .locationsContainer {
   width: 45%;
   height: 700px;
-  border: solid 2px gray;
+  overflow-y: scroll;
+  margin: 5px;
+}
+
+.locationCard {
+  border: solid 1px rgb(235, 233, 238);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px;
+}
+
+.locationCard-address {
+  margin: 18px 0px 18px 0px;
+}
+
+p {
   margin: 5px;
 }
 
 .mapContainer {
+  display: flex;
   width: 50%;
   height: 700px;
-  border: solid 2px gray;
   margin: 5px;
-}
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(233, 229, 229);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

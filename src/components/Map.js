@@ -3,9 +3,9 @@ import React from 'react';
 const Map = () => {
   return (
     <div className="mapContainer">
-      <h2>Map Component</h2>
+      <p>Select location to load map</p>
     </div>
   );
-}
+};
 
 export default Map;
