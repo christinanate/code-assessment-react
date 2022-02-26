@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Map = () => {
+const Map = ({ mapImageSrc }) => {
   return (
     <div className="mapContainer">
-      <p>Select location to load map</p>
+      {
+        mapImageSrc ?
+          <img src={mapImageSrc} alt='map'></img> :
+          <p>Select location to load map</p>
+      }
     </div>
   );
 };

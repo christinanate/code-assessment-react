@@ -23,6 +23,13 @@
   margin: 5px;
 }
 
+.locationCardSelected {
+  background-color: rgb(247, 230, 226);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px;
+}
+
 .locationCard-address {
   margin: 18px 0px 18px 0px;
 }
