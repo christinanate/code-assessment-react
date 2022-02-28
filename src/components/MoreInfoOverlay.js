@@ -1,6 +1,10 @@
 import React from 'react';
 
-const MoreInfoOverlay = ({ selectedLocation, closeMoreInfo }) => {
+const handleViewFullDetailsButtonClick = (locationUrl) => {
+  window.open(locationUrl);
+};
+
+const MoreInfoOverlay = ({ selectedLocation, closeMoreInfo, showMoreInfo }) => {
   return (
     <div className='moreInfoContainer'>
       <p onClick={() => closeMoreInfo()}>X</p>
@@ -41,9 +45,10 @@ const MoreInfoOverlay = ({ selectedLocation, closeMoreInfo }) => {
         </div>
       </div>
 
-      <button>VIEW FULL DETAILS</button>
+      <button onClick={() => handleViewFullDetailsButtonClick(selectedLocation.url)}>VIEW FULL DETAILS</button>
     </div>
   );
+
 }
 
 export default MoreInfoOverlay;
