@@ -1,7 +1,7 @@
 import React from 'react';
 import LocationCard from './LocationCard.js';
 
-const Locations = ({ locations, handleLocationCardSelection, selectedLocation, openMoreInfo, currentDay }) => {
+const Locations = ({ locations, handleLocationCardSelection, selectedLocation, tacoImageUrls, openMoreInfo, currentDay }) => {
   return (
     <div className='locationsContainer'>
       {locations.map((locationObj) =>
@@ -10,6 +10,7 @@ const Locations = ({ locations, handleLocationCardSelection, selectedLocation, o
           locationObj={locationObj}
           selectedLocation={selectedLocation}
           currentDay={currentDay}
+          tacoImageUrl={tacoImageUrls[locationObj.id]}
           handleLocationCardSelection={handleLocationCardSelection}
           openMoreInfo={openMoreInfo} />)}
     </div>
