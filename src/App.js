@@ -43,7 +43,7 @@ class App extends React.Component {
   }
 
   getTacoImages() {
-    fetch('https://api.unsplash.com/photos/random?query=taco&orientation=landscape&client_id=BCnRdIGHMogdBTr9edVjHtvJCCRElxOjUzLnQdKdksY&count=20')
+    fetch('https://api.unsplash.com/photos/random?query=taco&orientation=landscape&client_id=BCnRdIGHMogdBTr9edVjHtvJCCRElxOjUzLnQdKdksY&count=21')
       .then(response => response.json())
       .then(data => {
         let tacoImageUrls = data.map(imageObj => imageObj.urls.regular);
@@ -72,7 +72,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h1>Taco Truck Locator</h1>
+        <h1>Taco Truck Locations</h1>
         <div className='mainContainer'>
           <Locations
             locations={this.state.locations}
