@@ -3,6 +3,7 @@ import './App.css';
 import Locations from './components/Locations.js';
 import Map from './components/Map.js';
 import MoreInfoOverlay from './components/MoreInfoOverlay.js';
+import rioSEOLogo from './assets/rioseo-logo.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends React.Component {
       locations: [],
       selectedLocation: {},
       mapImageSrc: '',
-      showMoreInfo: false,
+      showMoreInfoBoolean: false,
       currentDay: '',
       tacoImageUrls: []
     };
@@ -55,39 +56,40 @@ class App extends React.Component {
   };
 
   handleLocationCardSelection(locationCard) {
-    console.log(locationCard);
+    // console.log(locationCard);
     this.setState({ selectedLocation: locationCard });
     this.setState({ mapImageSrc: `https://maps.googleapis.com/maps/api/staticmap?zoom=14&size=500x950&markers=color:red%7C${locationCard.latitude},${locationCard.longitude}&key=AIzaSyAGOOt8VQhLc41po8ttiL1iZCdQQefBi1E` });
   };
 
   openMoreInfo() {
-    this.setState({ showMoreInfo: true });
+    this.setState({ showMoreInfoBoolean: true });
   };
 
   closeMoreInfo() {
-    this.setState({ showMoreInfo: false });
+    this.setState({ showMoreInfoBoolean: false });
   };
 
 
   render() {
+    const { locations, selectedLocation, mapImageSrc, showMoreInfoBoolean, currentDay, tacoImageUrls } = this.state;
     return (
       <div className='App'>
-        <h1>Taco Truck Locations</h1>
+        <h1><img className='companyLogo' alt='riologo' src={rioSEOLogo}></img>Taco Truck Locations</h1>
         <div className='mainContainer'>
           <Locations
-            locations={this.state.locations}
-            selectedLocation={this.state.selectedLocation}
-            currentDay={this.state.currentDay}
+            locations={locations}
+            selectedLocation={selectedLocation}
+            currentDay={currentDay}
+            tacoImageUrls={tacoImageUrls}
             handleLocationCardSelection={this.handleLocationCardSelection.bind(this)}
             openMoreInfo={this.openMoreInfo.bind(this)} />
-          <Map mapImageSrc={this.state.mapImageSrc} />
-          {this.state.showMoreInfo &&
+          <Map mapImageSrc={mapImageSrc} />
+          {showMoreInfoBoolean &&
             <div className='overlay' onClick={() => this.closeMoreInfo()}>
               <MoreInfoOverlay
-                selectedLocation={this.state.selectedLocation}
-                showMoreInfo={this.state.showMoreInfo}
-                tacoImageUrl={this.state.tacoImageUrls[this.state.selectedLocation.id]}
-                currentDay={this.state.currentDay}
+                selectedLocation={selectedLocation}
+                tacoImageUrl={tacoImageUrls[selectedLocation.id]}
+                currentDay={currentDay}
                 closeMoreInfo={this.closeMoreInfo.bind(this)} />
             </div>
           }

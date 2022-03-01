@@ -3,11 +3,65 @@
   flex-direction: column;
 }
 
+.companyLogo {
+  margin-right: 20px;
+  width: 100px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: rgb(78, 75, 75);
+}
+
 .mainContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.locationsContainer {
+  width: 45%;
+  height: 700px;
+  overflow-y: scroll;
+  margin: 5px;
+}
+
+.mapContainer {
+  display: flex;
+  width: 50%;
+  height: 700px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 229, 229);
+}
+
+.locationCard {
+  border: solid 1px rgb(235, 233, 238);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px;
+}
+
+.locationCardSelected {
+  background-color: rgb(247, 230, 226);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px;
+}
+
+.truckDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.thumbnail {
+  width: 135px;
+  height: 110px;
+  border-radius: 20px;
+  border: 2px solid wheat;
 }
 
 .overlay {
@@ -24,25 +78,29 @@
   background-color: rgba(0, 0, 0, .7);
 }
 
-.locationsContainer {
-  width: 45%;
-  height: 700px;
-  overflow-y: scroll;
-  margin: 5px;
+.moreInfoContainer {
+  background-color: white;
+  align-items: center;
+  padding: 60px;
+  border-radius: 20px;
+  width: 350px;
+  height: auto;
 }
 
-.locationCard {
-  border: solid 1px rgb(235, 233, 238);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 5px;
+.hoursDayContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.locationCardSelected {
-  background-color: rgb(247, 230, 226);
-  border-radius: 20px;
-  padding: 20px;
-  margin: 5px;
+.tacoImgContainer {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.tacoImg {
+  height: 200px;
 }
 
 .addressContainer {
@@ -69,37 +127,4 @@ p {
   margin: 5px;
 }
 
-.mapContainer {
-  display: flex;
-  width: 50%;
-  height: 700px;
-  margin: 5px;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(233, 229, 229);
-}
 
-.hoursDayContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.moreInfoContainer {
-  background-color: white;
-  align-items: center;
-  padding: 60px;
-  border-radius: 20px;
-  width: 25%;
-  height: auto;
-}
-
-.tacoImgContainer {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
-}
-
-.tacoImg {
-  height: 200px;
-}
