@@ -45,7 +45,7 @@
   margin: 5px;
 }
 
-.locationCard-address {
+.addressContainer {
   margin: 18px 0px 18px 0px;
 }
 
@@ -58,7 +58,7 @@
 button {
   width: 150px;
   height: 30px;
-  background-color: black;
+  background-color: rgb(71, 71, 71);
   border: none;
   border-radius: 4px;
   color: white;
@@ -79,7 +79,7 @@ p {
   background-color: rgb(233, 229, 229);
 }
 
-.hoursDay {
+.hoursDayContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -92,4 +92,14 @@ p {
   border-radius: 20px;
   width: 25%;
   height: auto;
+}
+
+.tacoImgContainer {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.tacoImg {
+  height: 200px;
 }
