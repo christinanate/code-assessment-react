@@ -1,6 +1,10 @@
 import React from 'react';
 
-const LocationCard = ({ locationObj, handleLocationCardSelection, selectedLocation }) => {
+const handleDirectionsButtonClick = (locationAddress) => {
+  window.open(`https://www.google.com/maps/search/?api=1&query=${locationAddress}`);
+};
+
+const LocationCard = ({ locationObj, handleLocationCardSelection, selectedLocation, openMoreInfo }) => {
   let cardStyle = selectedLocation.id === locationObj.id ? 'locationCardSelected' : 'locationCard';
   return (
     <div
@@ -13,6 +17,12 @@ const LocationCard = ({ locationObj, handleLocationCardSelection, selectedLocati
         <p>{locationObj.city}, {locationObj.state} {locationObj.postal_code}</p>
       </div>
       <p>Open till some time today</p>
+
+      <div className='buttonContainer'>
+        <button onClick={() => handleDirectionsButtonClick(locationObj.address)}>DIRECTIONS</button>
+        <button onClick={() => openMoreInfo()}>MORE INFO</button>
+      </div>
+
     </div>
   );
 };

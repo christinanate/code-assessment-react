@@ -1,7 +1,7 @@
 import React from 'react';
 import LocationCard from './LocationCard.js';
 
-const Locations = ({ locations, handleLocationCardSelection, selectedLocation }) => {
+const Locations = ({ locations, handleLocationCardSelection, selectedLocation, openMoreInfo }) => {
   return (
     <div className="locationsContainer">
       {locations.map((locationObj) =>
@@ -9,7 +9,8 @@ const Locations = ({ locations, handleLocationCardSelection, selectedLocation })
           key={locationObj.id}
           locationObj={locationObj}
           handleLocationCardSelection={handleLocationCardSelection}
-          selectedLocation={selectedLocation} />)}
+          selectedLocation={selectedLocation}
+          openMoreInfo={openMoreInfo} />)}
     </div>
   );
 };
